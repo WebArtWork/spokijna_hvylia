@@ -29,11 +29,14 @@ ul {
 
 /* === PAGE LAYOUT === */
 .header {
+	flex: 1;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--c-text-primary);
+	color: var(--c-text-secondary);
+	justify-content: center;
 	padding: var(--padding);
-	// box-shadow: 0 2px 4px var(--c-shadow);
-	border-bottom: 1px solid var(--c-secondary);
 
 	&__left,
 	&__right {
@@ -96,7 +99,13 @@ ul {
 }
 
 .main-content {
+	flex: 1;
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: var(--padding);
+	background-color: var(--c-text-primary);
+	color: var(--c-text-secondary);
 
 	&__nav {
 		border-right: 1px solid var(--c-secondary);
@@ -129,10 +138,6 @@ ul {
 			&--active>.main-content__nav-link {
 				color: var(--c-primary-hover);
 				font-weight: 550;
-
-				// &:hover {
-				// 	font-weight: normal;
-				// }
 			}
 		}
 
@@ -166,7 +171,13 @@ ul {
 	width: 100%;
 	padding: var(--padding);
 	text-align: center;
-	border-top: 1px solid var(--c-secondary);
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--c-text-primary);
+	color: var(--c-text-secondary);
 
 	&__text {
 		margin: 0;
