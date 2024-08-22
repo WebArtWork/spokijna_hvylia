@@ -29,6 +29,7 @@ ul {
 
 /* === PAGE LAYOUT === */
 .header {
+	background-color: var(--c-topbar);
 
 	&__left,
 	&__right {
@@ -96,6 +97,7 @@ ul {
 	flex-direction: column;
 	justify-content: center;
 	padding: var(--padding);
+	background-color: var(--c-site);
 
 	&__nav {
 		border-right: 1px solid var(--c-secondary);
@@ -166,8 +168,8 @@ ul {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--c-text-secondary);
-	color: var(--c-text-primary);
+	background-color: var(--c-topbar);
+	color: var(--c-text);
 
 	&__text {
 		margin: 0;

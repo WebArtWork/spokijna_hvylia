@@ -13,7 +13,7 @@
 	--c-text-primary: #fff; /* Primary text color */
 	--c-secondary: #24373d; /* Secondary color changed by NBer */
 	--c-text-secondary: #000; /* Secondary text color */
-	--c-primary-hover: #F8EC20; /* Primary color for hover state */
+	--c-primary-hover: #5c5acc; /* Primary color for hover state */
 	--c-primary-cursor: #cfc720;
 	--c-error: #ff4d4d; /* Error color */
 	--c-primary-border: #0028ffcc; /* Color table borders */
@@ -40,8 +40,10 @@
 	--c-light-table: #f8f9fa; /* Color table */
 	--c-table-striped: #2c3034; /* Color table */
 	--c-border: #495057; /* Color border */
-	--c-site: #618264; /* Site color  */
-	--c-intro: #e7f0e7; /* Color intro */
+	--c-site: #f5f6f8; /* Site color  */
+	--c-topbar: #ab82fd; 
+	--c-intro: #d3beff; /* Color intro */
+	--c-text: #333333; 
 }
 
 $primary_color: var(--primary_color);
