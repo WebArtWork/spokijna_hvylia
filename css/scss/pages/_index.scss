@@ -696,6 +696,67 @@ table {
 	}
 }
 
+// .topbar {
+// 	display: flex;
+// 	justify-content: space-between;
+// 	align-items: center;
+// 	padding: 10px 20px;
+// 	background-color: var(--c-topbar);
+
+// 	&__container {
+// 		display: flex;
+// 		align-items: center;
+
+// 		&-brand {
+// 			font-weight: bold;
+// 			font-size: large;
+// 			color: var(--c-text);
+
+// 			@media (max-width: 768px) {
+// 				display: none;
+// 			}
+// 		}
+
+// 		&-links {
+// 			display: flex;
+// 			align-items: center;
+// 			font-weight: bold;
+
+// 			@media (max-width: 768px) {
+// 				position: static;
+// 				margin-right: 0;
+// 			}
+// 		}
+
+// 		&-link {
+// 			display: flex;
+// 			margin-right: 20px;
+// 			font-size: 18px;
+// 			color: var(--c-text);
+// 			text-decoration: none;
+// 			transition: color var(--transition);
+
+// 			&:hover {
+// 				color: var(--c-primary-hover);
+// 			}
+
+// 			@media (max-width: 768px) {
+// 				margin-right: 10px;
+// 			}
+// 		}
+
+// 		&-icon {
+// 			color: var(--c-text);
+// 			margin-right: 10px;
+// 			margin-top: 7px;
+
+// 			&:hover {
+// 				fill: var(--c-primary-hover);
+// 			}
+// 		}
+// 	}
+// }
+
 .topbar {
 	display: flex;
 	justify-content: space-between;
@@ -703,37 +764,39 @@ table {
 	padding: 10px 20px;
 	background-color: var(--c-topbar);
 
-	&__brand {
-		font-weight: bold;
-		color: var(--c-text);
-
-		@media (max-width: 768px) {
-			display: none;
-		}
-	}
-
-	&__left {
-		display: flex;
-		align-items: center;
-	}
-
-	&__right {
+	&__container {
 		display: flex;
 		align-items: center;
 
-		.topbar__links {
-			display: flex;
-			align-items: center;
-			margin-right: auto;
+		&-brand {
+			font-weight: bold;
+			font-size: larger;
+			color: var(--c-text);
 
 			@media (max-width: 768px) {
-				position: static;
-				margin-right: 0;
+				display: none;
+				/* Вимикаємо brand на мобільних пристроях */
 			}
 		}
 
-		.topbar__link {
-			margin-right: 20px;
+		&-links {
+			display: flex;
+			align-items: center;
+			font-weight: bold;
+			margin-left: auto;
+			/* Переміщуємо links праворуч на веб-версії */
+
+			@media (max-width: 768px) {
+				order: 1;
+				/* Переміщуємо links ліворуч на мобільних пристроях */
+				margin-left: 0;
+				margin-right: auto;
+			}
+		}
+
+		&-link {
+			display: flex;
+			margin-right: 15px;
 			font-size: 18px;
 			color: var(--c-text);
 			text-decoration: none;
@@ -748,10 +811,18 @@ table {
 			}
 		}
 
-		.topbar__icon {
+		&-icon {
 			color: var(--c-text);
-			margin-right: 10px;
 			margin-top: 7px;
+
+			a {
+				margin-right: 6px;
+			}
+
+			@media (max-width: 768px) {
+				order: 2;
+				margin-left: auto;
+			}
 
 			&:hover {
 				fill: var(--c-primary-hover);
