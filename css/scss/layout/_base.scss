@@ -167,7 +167,7 @@ ul {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	// align-items: start;
 	background-color: var(--c-topbar);
 	color: var(--c-text);
 
@@ -184,6 +184,30 @@ ul {
 		&:hover {
 			color: var(--c-primary-hover);
 			text-decoration: underline;
+		}
+	}
+
+	.our {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+
+		p {
+			font-weight: bolder;
+			font-size: large;
+		}
+	}
+
+	.contacts {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+
+		p {
+			font-weight: bolder;
+			font-size: large;
 		}
 	}
 }
