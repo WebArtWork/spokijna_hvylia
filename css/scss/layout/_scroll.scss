@@ -11,5 +11,21 @@
 }
 * ::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 6px var(--c-basic);
-    background-color: var(--c-basic);
+    background-color: var(--c-topbar);
 }
+
+// ::-webkit-scrollbar {
+//     width: 12px;
+// }
+
+// /* Фон скролу */
+// ::-webkit-scrollbar-track {
+//     background: #ffffff; /* білий фон */
+// }
+
+// /* Повзунок (кнопочка) */
+// ::-webkit-scrollbar-thumb {
+//     background-color: #AB82FD; /* колір кнопочки */
+//     border-radius: 6px; /* закруглення кнопочки */
+//     border: 3px solid #ffffff; /* додатковий білий простір навколо кнопочки */
+// }

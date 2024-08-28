@@ -823,7 +823,7 @@ table {
 }
 
 .web {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -847,25 +847,30 @@ table {
 		color: var(--c-text);
 		padding-left: 30px;
 		padding-right: 30px;
-		padding-top: 16rem;;
+		padding-top: 16rem;
+		;
 		padding-bottom: 16rem;
 	}
 
 	@media (min-width: 768px) {
-		color: var(--c-secondary-border);
-		padding-left: 200px;
-		padding-right: 200px;
-		padding-top: 250px;
-		padding-bottom: 250px;
+		font-size: 2em;
+		color: var(--c-text);
+		padding-left: 12rem;
+		padding-right: 12rem;
+		padding-top: 20rem;
+		padding-bottom: 20rem;
 	}
 }
 
 .button {
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: var(--c-text-primary);
 	display: flex;
 	flex-direction: column;
+
+	@media (max-width: 768px) {
+		background-color: var(--c-text-primary);
+	}
 
 	.active {
 		background-color: var(--c-topbar);
@@ -921,8 +926,27 @@ table {
 
 		@media (min-width: 768px) {
 			background-color: var(--c-topbar);
+
 		}
 
+
+	}
+}
+
+.info {
+	display: flex;
+	align-items: center;
+	background-color: var(--c-text-primary);
+
+	svg {
+		background-color: var(--c-text-primary);
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		text-align: center;
+		padding-left: 20px;
+		padding-right: 20px;
 
 	}
 }
@@ -935,17 +959,19 @@ table {
 	padding-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-	.card {
-		display: flex;
-		flex-direction: column;
-		background-color: var(--c-text-primary);
-		position: relative;
-		// box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
-		cursor: pointer;
-		transition: all 120ms;
-		justify-content: center;
-		// background: #fff;
+
+.card {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--c-text-primary);
+	position: relative;
+	// box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transition: all 120ms;
+	justify-content: center;
+	// background: #fff;
+
+	@media (max-width: 768px) {
 		padding: 20px;
 		padding-bottom: 60px;
 
@@ -997,5 +1023,13 @@ table {
 				}
 			}
 		}
+	}
+}
+
+@media (hover: none) {
+	.topbar__container-icon a:hover {
+		fill: initial;
+		/* Сбрасывает или изменяет стиль ховера для мобильных устройств */
+		background: none;
 	}
 }
