@@ -710,7 +710,7 @@ table {
 		&-brand {
 			font-weight: bold;
 			font-size: larger;
-			color: var(--c-text);
+			color: var(--c-text-secondary);
 
 			@media (max-width: 768px) {
 				display: none;
@@ -737,7 +737,7 @@ table {
 			display: flex;
 			margin-right: 15px;
 			font-size: 18px;
-			color: var(--c-text);
+			color: var(--c-text-secondary);
 			text-decoration: none;
 			transition: color var(--transition);
 			cursor: pointer;
