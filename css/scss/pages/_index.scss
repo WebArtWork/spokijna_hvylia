@@ -1030,21 +1030,78 @@ table {
 	}
 }
 
+// .info {
+// 	display: flex;
+// 	align-items: center;
+// 	background-color: var(--c-text-primary);
+
+// 	svg {
+// 		background-color: var(--c-text-primary);
+// 	}
+
+// 	@media (max-width: 768px) {
+// 		flex-direction: column;
+// 		text-align: center;
+// 		padding-left: 20px;
+// 		padding-right: 20px;
+// 	}
+
+// 	@media (min-width: 768px) {
+// 		justify-content: space-between;
+// 		text-align: start;
+// 		padding-left: 4rem;
+// 		padding-right: 4rem;
+
+// 		svg {
+// 			display: inline-block;
+// 		}
+
+// 		.description {
+// 			display: flex;
+// 			flex-direction: column;
+// 		}
+// 	}
+// }
+
 .info {
 	display: flex;
 	align-items: center;
 	background-color: var(--c-text-primary);
-
-	svg {
-		background-color: var(--c-text-primary);
-	}
 
 	@media (max-width: 768px) {
 		flex-direction: column;
 		text-align: center;
 		padding-left: 20px;
 		padding-right: 20px;
+	}
 
+	@media (min-width: 768px) {
+		justify-content: space-between;
+		text-align: start;
+		padding-left: 4rem;
+		padding-right: 4rem;
+
+		.details-one,
+		.details-two {
+			display: flex;
+			align-items: center;
+		}
+
+		.box-1,
+		.box-2 {
+			display: flex;
+			align-items: center;
+		}
+
+		svg {
+			margin-right: 20px;
+			/* Відстань між SVG та описом */
+		}
+
+		.description {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 }
 
@@ -1126,7 +1183,7 @@ table {
 @media (hover: none) {
 	.topbar__container-icon a:hover {
 		fill: initial;
-		/* Сбрасывает или изменяет стиль ховера для мобильных устройств */
+		/* Стиль ховера для мобільних пристроїв */
 		background: none;
 	}
 }
