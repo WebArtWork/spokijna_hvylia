@@ -639,11 +639,6 @@ table {
 		&:last-child {
 			margin-bottom: 0;
 		}
-
-		// img {
-		// 	border-radius: 25%;
-		// 	margin: 10px;
-		// }
 	}
 }
 
@@ -654,18 +649,6 @@ table {
 .border {
 	border: 1px solid var(--c-border);
 }
-
-// .img {
-// 	padding: 10px;
-// 	border-radius: 5px;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// }
-
-// .image {
-// 	border-radius: 50%;
-// }
 
 .text {
 	display: flex;
@@ -1030,39 +1013,6 @@ table {
 	}
 }
 
-// .info {
-// 	display: flex;
-// 	align-items: center;
-// 	background-color: var(--c-text-primary);
-
-// 	svg {
-// 		background-color: var(--c-text-primary);
-// 	}
-
-// 	@media (max-width: 768px) {
-// 		flex-direction: column;
-// 		text-align: center;
-// 		padding-left: 20px;
-// 		padding-right: 20px;
-// 	}
-
-// 	@media (min-width: 768px) {
-// 		justify-content: space-between;
-// 		text-align: start;
-// 		padding-left: 4rem;
-// 		padding-right: 4rem;
-
-// 		svg {
-// 			display: inline-block;
-// 		}
-
-// 		.description {
-// 			display: flex;
-// 			flex-direction: column;
-// 		}
-// 	}
-// }
-
 .info {
 	display: flex;
 	align-items: center;
@@ -1083,6 +1033,11 @@ table {
 			width: 50px;
 			height: 50px;
 		}
+
+		.svg-3 {
+			width: 50px;
+			height: 50px;
+		}
 	}
 
 	@media (min-width: 768px) {
@@ -1092,14 +1047,16 @@ table {
 		padding-right: 8rem;
 
 		.details-one,
-		.details-two {
+		.details-two,
+		.details-three {
 			display: flex;
 			align-items: center;
 			width: 400px;
 		}
 
 		.box-1,
-		.box-2 {
+		.box-2,
+		.box-3 {
 			display: flex;
 			align-items: center;
 		}
@@ -1118,12 +1075,18 @@ table {
 			height: 170px;
 		}
 
+		.svg-3 {
+			width: 170px;
+			height: 170px;
+		}
+
 		.description {
 			display: flex;
 			flex-direction: column;
 		}
 	}
 }
+
 
 .order {
 	background-color: var(--c-text-primary);
@@ -1133,60 +1096,63 @@ table {
 	padding-bottom: 20px;
 }
 
-
-.card {
+.product {
 	display: flex;
 	flex-direction: column;
-	background-color: var(--c-text-primary);
-	position: relative;
-	// box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
-	cursor: pointer;
-	transition: all 120ms;
-	justify-content: center;
-	// background: #fff;
+	align-items: center;
+	padding: 10px 15px;
 
-	@media (max-width: 768px) {
-		padding: 20px;
-		padding-bottom: 60px;
+	.card {
+		width: 100%;
+		margin-bottom: 20px;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
 		.image {
 			width: 100%;
-			height: 100%;
-			display: grid;
-			place-items: center;
-			padding-bottom: 10px;
+
+			img {
+				width: 100%;
+			}
 		}
 
 		.description {
-			padding: 10px 10px;
+			margin-top: 10px;
+			width: 100%;
 			display: flex;
 			justify-content: space-between;
+			align-items: center;
 
 			.details {
 				display: flex;
 				flex-direction: column;
+				align-items: flex-start;
 
 				.title {
 					font-family: Arial;
-					// font-size: 0.9em;
-					// left: 0.625em;
-					// bottom: 1.875em;
-					// font-weight: 400;
+					font-weight: bold;
+					margin-bottom: 5px;
+					/* Додаємо відступ між назвою та ціною */
 				}
 
 				.price {
 					font-family: Arial;
+					font-size: 1.2em;
 				}
 			}
 
 			button {
+				padding: 10px;
+				background-color: var(--c-topbar); 
+				border: none;
+				border-radius: 5px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 				width: 100px;
 				height: 55px;
-				background: var(--c-topbar);
-				border-radius: 5px;
-				margin-left: auto;
-				// border: solid 3px var(--c-topbar);
-				border: none;
 
 				svg {
 					padding-left: 5px;
@@ -1194,6 +1160,43 @@ table {
 					padding-bottom: 5px;
 					width: 40px;
 					height: 40px;
+				}
+			}
+		}
+	}
+
+	@media(min-width: 768px) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		padding: 20px 100px;
+
+		.card {
+			width: calc(25% - 20px); // елементи в рядок
+			margin-bottom: 20px;
+
+			.image {
+				width: 100%;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.description {
+				.details {
+					.title {
+						font-size: 1em;
+					}
+
+					.price {
+						font-size: 1em;
+					}
+				}
+
+				button {
+					padding: 5px;
+					font-size: 0.9em;
 				}
 			}
 		}
