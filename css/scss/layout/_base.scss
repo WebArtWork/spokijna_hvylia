@@ -162,14 +162,22 @@ ul {
 .footer {
 	width: 100%;
 	padding: var(--padding);
-	text-align: center;
+	text-align: start;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	// align-items: start;
+	align-items: start;
 	background-color: var(--c-topbar);
 	color: var(--c-text-secondary);
+
+	// Зміни для веб-версії
+	@media(min-width: 768px) {
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: flex-start;
+		text-align: left;
+	}
 
 	&__text {
 		margin: 0;
@@ -187,27 +195,45 @@ ul {
 		}
 	}
 
-	.our {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: start;
-
-		p {
-			font-weight: bolder;
-			font-size: large;
-		}
+	// Залишаємо мобільну версію h1
+	h1 {
+		font-size: 1.8em;
+		margin-bottom: 20px;
 	}
 
+	// Модифікація для our та contacts
+	.our,
 	.contacts {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: start;
 		align-items: start;
+
+		@media(min-width: 768px) {
+			align-items: flex-start;
+		}
 
 		p {
 			font-weight: bolder;
 			font-size: large;
+			margin-bottom: 10px;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		li {
+			margin-bottom: 5px;
+		}
+	}
+
+	// Веб-версія для h1
+	@media(min-width: 768px) {
+		h1 {
+			margin-bottom: 0;
+			font-size: 2em;
 		}
 	}
 }
