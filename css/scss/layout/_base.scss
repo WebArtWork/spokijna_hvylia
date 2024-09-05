@@ -17,10 +17,6 @@ body {
 	flex-direction: column;
 }
 
-// a {
-// 	color: var(--c-text-primary);
-// }
-
 ul {
 	list-style: none;
 	padding: 0;
@@ -169,7 +165,7 @@ ul {
 	justify-content: center;
 	align-items: start;
 	background-color: var(--c-topbar);
-	color: var(--c-text-secondary);
+	color: var(--c-site);
 
 	// Зміни для веб-версії
 	@media(min-width: 768px) {

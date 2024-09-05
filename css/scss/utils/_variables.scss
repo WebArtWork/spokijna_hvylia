@@ -1,49 +1,80 @@
 :root {
-	--fs: 16px; /* Font size */
-	--icon-size: 16px; /* Size for icons. */
-	--ff-base: 'Helvetica, Arial, sans-serif'; /* Base font family */
-	--b-radius: 4px; /* Border radius */
-	--transition: 0.3s ease-in-out; /* Transition property */
-	--letter-spacing: 0.5px; /* Letter spacing */
-	--padding: 16px; /* Padding */
-	--margin: 16px; /* Margin */
-	--font-size: 16px; /* Font size */
-	--line-height: 1.5; /* Line height */
-	--c-primary: #212529; /* Primary color */
-	--c-text-primary: #fff; /* Primary text color */
-	--c-secondary: #24373d; /* Secondary color changed by NBer */
-	--c-text-secondary: #000; /* Secondary text color */
-	--c-primary-hover: #5c5acc; /* Primary color for hover state */
+	--fs: 16px;
+	/* Font size */
+	--icon-size: 16px;
+	/* Size for icons. */
+	--ff-base: "Montserrat", sans-serif;
+	/* Base font family */
+	--b-radius: 4px;
+	/* Border radius */
+	--transition: 0.3s ease-in-out;
+	/* Transition property */
+	--letter-spacing: 0.5px;
+	/* Letter spacing */
+	--padding: 16px;
+	/* Padding */
+	--margin: 16px;
+	/* Margin */
+	--font-size: 16px;
+	/* Font size */
+	--line-height: 1.5;
+	/* Line height */
+	--c-primary: #212529;
+	/* Primary color */
+	--c-text-primary: #fff;
+	/* Primary text color */
+	--c-secondary: #24373d;
+	/* Secondary color changed by NBer */
+	--c-text-secondary: #000;
+	/* Secondary text color */
+	--c-primary-hover: #5c5acc;
+	/* Primary color for hover state */
 	--c-primary-cursor: #cfc720;
-	--c-error: #ff4d4d; /* Error color */
-	--c-primary-border: #0028ffcc; /* Color table borders */
-	--c-secondary-border: #a0a0a0; /* Color table borders */
-	--c-success-border: #00ff00; /* Color table borders */
-	--c-danger-border: #ff0000;  /* Color table borders */
-	--c-warning-border: #ffff00; /* Color table borders */
-	--c-info-border: #00ffff; /* Color table borders */
+	--c-error: #ff4d4d;
+	/* Error color */
+	--c-primary-border: #0028ffcc;
+	/* Color table borders */
+	--c-secondary-border: #a0a0a0;
+	/* Color table borders */
+	--c-success-border: #00ff00;
+	/* Color table borders */
+	--c-danger-border: #ff0000;
+	/* Color table borders */
+	--c-warning-border: #ffff00;
+	/* Color table borders */
+	--c-info-border: #00ffff;
+	/* Color table borders */
 	--c-success: #2bb729;
-	--c-error-hover: #cc0000; /* Error color for hover state */
-	--c-shadow: rgba(0, 0, 0, 0.5); /* Shadow color */
-	--c-table-shadow: rgba(0, 0, 0, 0.15);  /* Shadow table color */
-	--c-placeholder: #666666; /* Placeholder text color */
-	--c-bg-item: #1c1c1c; /* background item color */
-	--c-text-body-secondary: #6c757d; /* text example color */
-	--c-code-hover: #007eff; /* text code color */
-	--c-shadow-table: rgba(0, 0, 0, 0.2); /* Shadow table color */
-	--c-primary-table: #cfe2ff; /* Color table */
-	--c-secondary-table: #e2e3e5; /* Color table */
-	--c-success-table: #d1e7dd; /* Color table */
-	--c-danger-table: #f8d7da; /* Color table */
-	--c-warning-table: #fff3cd; /* Color table */
-	--c-info-table: #cff4fc; /* Color table */
-	--c-light-table: #f8f9fa; /* Color table */
-	--c-table-striped: #2c3034; /* Color table */
-	--c-border: #495057; /* Color border */
+	--c-error-hover: #cc0000;
+	/* Error color for hover state */
+	--c-shadow: rgba(0, 0, 0, 0.5);
+	/* Shadow color */
+	--c-table-shadow: rgba(0, 0, 0, 0.15);
+	/* Shadow table color */
+	--c-placeholder: #666666;
+	/* Placeholder text color */
+	--c-bg-item: #1c1c1c;
+	/* background item color */
+	--c-text-body-secondary: #6c757d;
+	/* text example color */
+	--c-code-hover: #007eff;
+	/* text code color */
+	--c-shadow-table: rgba(0, 0, 0, 0.2);
+	/* Shadow table color */
+	--c-primary-table: #cfe2ff;
+	--c-secondary-table: #e2e3e5;
+	--c-success-table: #d1e7dd;
+	--c-danger-table: #f8d7da;
+	--c-warning-table: #fff3cd;
+	--c-info-table: #cff4fc;
+	--c-light-table: #f8f9fa;
+	--c-table-striped: #2c3034;
+	--c-border: #495057;
 	--c-site: #f5f6f8; /* Site color  */
-	--c-topbar: #ab82fd; 
-	--c-intro: #d3beff; /* Color intro */
-	--c-text: #333333; 
+	--c-d-site: #1c4b75;
+	--c-topbar: #02b1e8;
+	--c-intro: #80e0ff;
+	--c-text: #333333;
 	--c-scroll: #dedede;
 	--c-scroll-thumb: #ababab;
 }
@@ -117,11 +148,11 @@ $lh5: 1.5 * $line-height;
 
 /* font family */
 $ff-base: "Roboto",
-sans-serif;
+	sans-serif;
 $ff-title: "Lato",
-sans-serif;
+	sans-serif;
 $ff-second: 'Roboto',
-sans-serif;
+	sans-serif;
 
 /* font-size */
 $fs: 16px;

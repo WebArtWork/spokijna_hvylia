@@ -11,6 +11,11 @@ $green: #928907;
 $green-darken: #16a085;
 $red-darken: #581010;
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
 .index {
 	flex: 1;
 	display: flex;
@@ -693,7 +698,13 @@ table {
 		&-brand {
 			font-weight: bold;
 			font-size: larger;
-			color: var(--c-text-secondary);
+			color: var(--c-site);
+
+			.logo {
+				padding: 5px;
+				width: 90px;
+				height: 70px;
+			}
 
 			@media (max-width: 768px) {
 				display: none;
@@ -720,7 +731,7 @@ table {
 			display: flex;
 			margin-right: 15px;
 			font-size: 18px;
-			color: var(--c-text-secondary);
+			color: var(--c-site);
 			text-decoration: none;
 			transition: color var(--transition);
 			cursor: pointer;
@@ -765,15 +776,22 @@ table {
 		}
 
 		&-icon {
-			color: var(--c-text);
+			color: var(--c-site);
 			margin-top: 7px;
 
 			a {
 				margin-right: 6px;
 
-				&:hover {
+				svg {
+					fill: var(--c-site);
 					transition: var(--transition);
-					fill: var(--c-primary-hover);
+				}
+
+				&:hover {
+
+					svg {
+						fill: var(--c-primary-hover);
+					}
 				}
 			}
 
@@ -827,15 +845,12 @@ table {
 
 .intro {
 	@media (max-width: 768px) {
-		color: var(--c-text);
-		padding-left: 30px;
-		padding-right: 30px;
-		padding-top: 16rem;
-		padding-bottom: 16rem;
+		color: var(--c-d-site);
+		padding: 17rem 2rem;
 	}
 
 	@media only screen and (min-width: 768px) and (max-width: 1024px) {
-		color: var(--c-text);
+		color: var(--c-d-site);
 		font-size: 2em;
 		padding-left: 12rem;
 		padding-right: 12rem;
@@ -845,11 +860,11 @@ table {
 
 	@media (min-width: 1024px) {
 		font-size: 2em;
-		color: var(--c-text);
+		color: var(--c-d-site);
 		padding-left: 12rem;
 		padding-right: 12rem;
 		padding-top: 20rem;
-		padding-bottom: 1rem;
+		padding-bottom: 2rem;
 	}
 }
 
@@ -876,7 +891,7 @@ table {
 			background-color: var(--c-intro);
 			border: 3px solid var(--c-topbar);
 			box-sizing: border-box;
-			color: var(--c-text);
+			color: var(--c-d-site);
 			cursor: pointer;
 			// font-size: 14px;
 			font-weight: 500;
@@ -898,7 +913,7 @@ table {
 
 			&:hover {
 				background-color: var(--c-topbar);
-				color: var(--c-text);
+				color: var(--c-d-site);
 				text-decoration: none;
 				transition-duration: 0.3s;
 			}
@@ -924,7 +939,7 @@ table {
 			background-color: var(--c-intro);
 			border: 3px solid var(--c-topbar);
 			box-sizing: border-box;
-			color: var(--c-text);
+			color: var(--c-d-site);
 			cursor: pointer;
 			// font-size: 14px;
 			font-weight: 500;
@@ -989,7 +1004,7 @@ table {
 			text-align: center;
 			margin-right: 12rem;
 			margin-left: 12rem;
-			margin-bottom: 15rem;
+			margin-bottom: 16rem;
 
 			&:hover {
 				background-color: var(--c-topbar);
@@ -1024,6 +1039,20 @@ table {
 		padding-left: 20px;
 		padding-right: 20px;
 
+		.description {
+			h3 {
+				margin: 10px 0px;
+			}
+
+			p {
+				margin-bottom: 20px;
+			}
+		}
+
+		svg {
+			fill: var(--c-topbar);
+		}
+
 		.svg-1 {
 			width: 52px;
 			height: 52px;
@@ -1041,10 +1070,9 @@ table {
 	}
 
 	@media (min-width: 768px) {
-		justify-content: space-between;
+		justify-content: center;
 		text-align: left;
-		padding-left: 8rem;
-		padding-right: 8rem;
+		padding: 3rem 10rem;
 
 		.details-one,
 		.details-two,
@@ -1059,25 +1087,37 @@ table {
 		.box-3 {
 			display: flex;
 			align-items: center;
+			padding: 0px 20px;
+
+			.description {
+				h3 {
+					margin: 10px 0px;
+				}
+	
+				p {
+					margin-bottom: 20px;
+				}
+			}
 		}
 
 		svg {
 			margin-right: 20px;
+			fill: var(--c-topbar);
 		}
 
 		.svg-1 {
-			width: 200px;
-			height: 200px;
+			width: 150px;
+			height: 150px;
 		}
 
 		.svg-2 {
-			width: 170px;
-			height: 170px;
+			width: 120px;
+			height: 120px;
 		}
 
 		.svg-3 {
-			width: 170px;
-			height: 170px;
+			width: 120px;
+			height: 120px;
 		}
 
 		.description {
@@ -1113,9 +1153,9 @@ table {
 		.image {
 			width: 100%;
 
-			img {
-				width: 100%;
-			}
+			// img {
+			// 	width: 100%;
+			// }
 		}
 
 		.description {
@@ -1145,7 +1185,7 @@ table {
 
 			button {
 				padding: 10px;
-				background-color: var(--c-topbar); 
+				background-color: var(--c-topbar);
 				border: none;
 				border-radius: 5px;
 				display: flex;
@@ -1169,7 +1209,7 @@ table {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		padding: 20px 100px;
+		padding: 20px 200px;
 
 		.card {
 			width: calc(25% - 20px); // елементи в рядок
@@ -1178,9 +1218,9 @@ table {
 			.image {
 				width: 100%;
 
-				img {
-					width: 100%;
-				}
+				// img {
+				// 	width: 100%;
+				// }
 			}
 
 			.description {
