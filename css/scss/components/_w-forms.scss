@@ -110,6 +110,8 @@
 		}
 
 		&__btn {
+			padding-top: 5px;
+
 			.btn {
 				width: 100%;
 				max-width: 100%;
@@ -124,7 +126,7 @@
 		width: 100%;
 		font-size: 20px;
 		padding: 18px 8px;
-		border-radius: 5px;
+		border-radius: 10px;
 		border: 2px solid var(--c-topbar);
 		background: transparent;
 		color: var(--c-text-primary);
@@ -139,11 +141,12 @@
 		width: 100%;
 		font-size: 20px;
 		padding: 18px 8px;
-		border-radius: 5px;
+		border-radius: 10px;
 		border: 2px solid var(--c-topbar);
 		background: transparent;
 		color: var(--c-text-primary);
 		resize: none;
+		margin-bottom: 15px;
 
 		&::placeholder {
 			color: var(--c-text-primary);
@@ -153,7 +156,6 @@
 	.radio-input {
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
 	}
 
 	.radio-input * {
@@ -167,10 +169,11 @@
 		align-items: center;
 		gap: 15px;
 		padding: 0px 20px;
-		width: 220px;
+		width: 273px;
 		cursor: pointer;
 		height: 50px;
 		position: relative;
+		margin-bottom: 10px;
 	}
 
 	.radio-input label::before {
@@ -196,6 +199,7 @@
 		background-color: #2d3750;
 		border-color: var(--c-topbar);
 		height: 50px;
+		width: 273px;
 	}
 
 	.radio-input .label .text {
