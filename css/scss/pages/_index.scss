@@ -770,6 +770,11 @@ table {
 				color: var(--c-primary-hover);
 			}
 
+			&:after {
+				content: '';
+				display: none;
+			}
+
 			@media (max-width: 768px) {
 				margin-right: 10px;
 			}
@@ -793,6 +798,11 @@ table {
 						fill: var(--c-primary-hover);
 					}
 				}
+
+				&:after {
+					content: '';
+					display: none;
+				}
 			}
 
 			@media (max-width: 768px) {
@@ -804,13 +814,9 @@ table {
 }
 
 .mobile {
-	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
-	height: 100%;
-	z-index: -1;
-	overflow: hidden;
+	height: 100vh;
+	z-index: 1;
 
 	video {
 		width: 100%;
@@ -824,9 +830,9 @@ table {
 }
 
 .web {
-    width: 100%;
-    height: 100vh;
-    z-index: 1;
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
 
 	video {
 		width: 100%;
@@ -841,28 +847,25 @@ table {
 
 .intro {
 	@media (max-width: 768px) {
+		font-size: 14px;
 		color: var(--c-d-site);
-		padding: 11rem 2rem;
+		padding: 3rem;
+		position: absolute;
+		top: 150px;
+		left: 0;
+		z-index: 9;
+
+		p {
+			padding: 10px 0;
+		}
 	}
 
-	@media only screen and (min-width: 768px) and (max-width: 1024px) {
-		color: var(--c-d-site);
-		font-size: 1rem;
-		padding-left: 10rem;
-		padding-right: 10rem;
-		padding-top: 16rem;
-		padding-bottom: 1rem;
-	}
-
-	@media (min-width: 1024px) {
+	@media (min-width: 768px) {
 		font-size: 2em;
 		color: var(--c-d-site);
-		padding-left: 12rem;
-		padding-right: 12rem;
-		padding-top: 12rem;
-		padding-bottom: 2rem;
+		padding: 12rem;
 		position: absolute;
-		top: 85px;
+		top: 150px;
 		left: 0;
 		z-index: 9;
 	}
@@ -872,28 +875,21 @@ table {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	display: flex;
-	flex-direction: column;
-
-	@media (max-width: 768px) {
-		background-color: var(--c-text-primary);
-	}
 
 	.active {
 		background-color: var(--c-topbar);
 	}
 
-	/* From Uiverse.io by e-coders */
 	button {
-		border-radius: 5px;
+		border-radius: 12px;
 
 		@media (max-width: 768px) {
 			appearance: none;
-			background-color: var(--c-intro);
-			border: 3px solid var(--c-topbar);
+			background-color: var(--c-topbar);
 			box-sizing: border-box;
-			color: var(--c-d-site);
+			border: none;
+			color: var(--c-site);
 			cursor: pointer;
-			// font-size: 14px;
 			font-weight: 500;
 			line-height: 20px;
 			list-style: none;
@@ -906,27 +902,29 @@ table {
 			vertical-align: middle;
 			white-space: nowrap;
 			word-wrap: break-word;
-			margin-bottom: 12px;
 			text-align: center;
-			margin-right: 30px;
-			margin-left: 30px;
+			font-size: 1rem;
 
-			&:hover {
-				background-color: var(--c-topbar);
+			a {
+				color: var(--c-site);
+			}
+
+			&:active {
+				background-color: var(--c-intro);
 				color: var(--c-d-site);
-				text-decoration: none;
 				transition-duration: 0.3s;
 			}
 
+			// Повертаємо початковий стан після завершення кліку
 			&:focus {
-				outline: 1px transparent;
+				background-color: var(--c-topbar);
+				color: var(--c-site);
+				outline: none;
 			}
 
-			&:before {
-				display: none;
-			}
-
-			&:-webkit-details-marker {
+			// Щоб одразу після кліку стан active не тримався
+			&:after {
+				content: '';
 				display: none;
 			}
 		}
@@ -987,14 +985,15 @@ table {
 			justify-content: center;
 			align-items: center;
 			font-size: 20px;
-			margin-top: 30px;
-			background-color: #007eff;
+			background-color: var(--c-topbar);
 			width: 100%;
 			border: none;
-			transition: all .3s;
+			transition: var(--transition);
 			cursor: pointer;
-			color: #fff;
-			&:hover{
+			color: var(--c-site);
+			padding: 0 1rem;
+
+			&:hover {
 				background-color: #0f5daa;
 			}
 		}
@@ -1009,8 +1008,7 @@ table {
 	@media (max-width: 768px) {
 		flex-direction: column;
 		text-align: center;
-		padding-left: 20px;
-		padding-right: 20px;
+		padding: 20px;
 
 		.description {
 			h3 {
@@ -1050,7 +1048,8 @@ table {
 		.details {
 			display: flex;
 			align-items: center;
-			width: 400px;
+			width: 500px;
+			padding: 0 10px;	
 		}
 
 		.box {
@@ -1061,7 +1060,7 @@ table {
 				h3 {
 					margin: 0 0 10px 0;
 				}
-	
+
 				p {
 					margin-bottom: 20px;
 				}
