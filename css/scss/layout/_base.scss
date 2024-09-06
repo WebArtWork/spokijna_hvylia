@@ -198,8 +198,7 @@ ul {
 	}
 
 	// Модифікація для our та contacts
-	.our,
-	.contacts {
+	&-contacts {
 		display: flex;
 		flex-direction: column;
 		justify-content: start;
@@ -222,6 +221,15 @@ ul {
 
 		li {
 			margin-bottom: 5px;
+		}
+
+		&__link {
+			color: var(--c-site);
+
+			&:hover {
+				transition: var(--transition);
+				color: var(--c-primary-hover);
+			}
 		}
 	}
 
