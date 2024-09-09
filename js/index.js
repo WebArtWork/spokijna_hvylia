@@ -69,3 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+$('.slider-wrap ').slick({
+    dots: true,
+    arrows: true
+});

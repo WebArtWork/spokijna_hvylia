@@ -234,41 +234,42 @@
     <h1>Відгуки клієнтів</h1>
 </div>
 
-<div class="testimonials-slider">
-    <div class="slide">
-        <div class="user">
-            <div class="title">
-                <h6>Хтось</h6>
-            </div>
-            <hr>
-            <div class="description">
-                <p>Сказав щось</p>
-            </div>
-        </div>
-    </div>
-    <div class="slide">
-        <div class="user">
-            <div class="title">
-                <h6>Інший</h6>
-            </div>
-            <hr>
-            <div class="description">
-                <p>Сказав ще щось</p>
+    
+    <div class="slider-wrap">
+        <div class="slider-item">
+            <div class="feedback__card">
+                <div class="feedback__title">
+                    Хтось лалала1
+                </div>
+                <div class="feedback__description">
+                    Шось сказавфівалфішаьфізвабфізхвюхфі
+                </div>
             </div>
         </div>
-    </div>
-    <div class="slide">
-        <div class="user">
-            <div class="title">
-                <h6>Третій</h6>
-            </div>
-            <hr>
-            <div class="description">
-                <p>Теж сказав щось цікаве</p>
+        
+        <div class="slider-item">
+            <div class="feedback__card">
+                <div class="feedback__title">
+                    Хтось лалала2
+                </div>
+                <div class="feedback__description">
+                    Шось сказавфівалфішаьфізвабфізхвюхфі
+                </div>
             </div>
         </div>
+
+        <div class="slider-item">
+            <div class="feedback__card">
+                <div class="feedback__title">
+                    Хтось лалала13
+                </div>
+                <div class="feedback__description">
+                    Шось сказавфівалфішаьфізвабфізхвюхфі
+                </div>
+            </div>
+        </div>
+
     </div>
-</div>
 
 <footer class="footer">
     <h1>СПОКІЙНА ХВИЛЯ</h1>
@@ -297,42 +298,51 @@
 
 <!-- Hidden content templates -->
 <div id="content1" class="modal-template">
-    <form action="" class="w-forms">
-        <div class="w-forms__title">
+    <form action="" class="w-form form">
+        <div class="w-form__title">
             Замовлення
         </div>
-        <div class="w-forms__item">
-            Товар
+        <div class="form__first">
+            <div class="w-form__item">
+                Товар
+            </div>
+            <div class="w-form__input">
+                <input type="text" placeholder="Назва набору">
+            </div>
+            <div class="w-form__input">
+                <input type="text" placeholder="К-ть">
+            </div>
         </div>
-        <div class="w-forms__input">
-            <input type="text" placeholder="Назва набору">
+        <div class="form__first">
+            <div class="w-form__item">
+                Товар
+            </div>
+            <div class="w-form__input">
+                <input type="text" placeholder="Місто">
+            </div>
+            <div class="w-form__input">
+                <input type="text" placeholder="Нова пошта">
+            </div>
+            <div class="w-form__textarea">
+                <textarea name="" id="" placeholder="Товар та його кількість"></textarea>
+            </div>
         </div>
-        <div class="w-forms__input">
-            <input type="text" placeholder="К-ть">
+        <div class="form__first">
+            <div class="w-form__item">
+                Товар
+            </div>
+            <div class="radio-input">
+                <label class="label">
+                    <input type="radio" id="value-1" checked="" name="value-radio" value="value-1" />
+                    <p class="text">Накладений платіж</p>
+                </label>
+                <label class="label">
+                    <input type="radio" id="value-2" name="value-radio" value="value-2" />
+                    <p class="text">Каротою</p>
+                </label>
+            </div>
         </div>
-        <div class="w-forms__item">
-            Товар
-        </div>
-        <div class="w-forms__input">
-            <input type="text" placeholder="Місто">
-        </div>
-        <div class="w-forms__input">
-            <input type="text" placeholder="Нова пошта">
-        </div>
-        <div class="w-forms__textarea">
-            <textarea name="" id="" placeholder="Товар та його кількість"></textarea>
-        </div>
-        <div class="radio-input">
-            <label class="label">
-                <input type="radio" id="value-1" checked="" name="value-radio" value="value-1" />
-                <p class="text">Накладений платіж</p>
-            </label>
-            <label class="label">
-                <input type="radio" id="value-2" name="value-radio" value="value-2" />
-                <p class="text">Каротою</p>
-            </label>
-        </div>
-        <div class="w-forms__btn">
+        <div class="w-form__btn">
             <button class="btn">Надіслати</button>
         </div>
     </form>
