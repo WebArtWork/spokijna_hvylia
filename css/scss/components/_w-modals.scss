@@ -1,15 +1,35 @@
 .open-modal {
   cursor: pointer;
-  display: inline-block;
+  // display: inline-block;
+  display: flex;
+  align-items: center;
   padding: 10px 20px;
-  margin: 10px;
-  background-color: var(--c-primary-hover);
-  color: var(--c-secondary);
+  // margin: 10px;
+  margin: 10px 10px 10px auto;
+  // background-color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  // color: var(--c-secondary);
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  border: 1px solid var(--c-text-primary);
+
+  p {
+    color: var(--c-text-primary);
+  }
+
+
+  svg {
+
+    @media (min-width: 768px) {
+      width: 32px;
+      height: 32px;
+      margin-left: 20px;
+    }
+  }
 
   &:hover {
-    background-color: var(--c-primary-cursor);
+    // background-color: rgba(245, 245, 245, 0.6);
+    background-color: rgba(255, 255, 255, 0.3);
   }
 }
 
