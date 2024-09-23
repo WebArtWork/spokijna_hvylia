@@ -79,7 +79,6 @@
 .modal-content {
   background-color: #343434;
   /* 10% from the top and centered */
-  padding: 20px;
   border: 1px solid #88888859;
   /* Could be more or less, depending on screen size */
   position: absolute;
@@ -91,6 +90,14 @@
   transform: scale(0.7);
   color: var(--c-text-primary);
   overflow-y: scroll;
+
+  @media (max-width: 768px) {
+    padding: 40px 30px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 5rem 40rem;
+  }
 }
 
 .modal.show .modal-content {
