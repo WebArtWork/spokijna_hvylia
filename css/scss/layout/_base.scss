@@ -169,10 +169,40 @@ ul {
 	background-color: var(--c-topbar);
 	color: var(--c-text-primary);
 
+	&__container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		@media(max-width: 768px) {
+			margin-bottom: 20px;
+
+			&-logo {
+				display: none;
+			}
+		}
+
+		@media(min-width: 768px) {
+			margin: 0 50px;
+
+			&-logo {
+				padding: 5px;
+				width: 90px;
+				height: 70px;
+			}
+		}
+
+		&-brand {
+			font-weight: bold;
+			font-size: larger;
+			color: var(--c-site);
+		}
+	}
+
 	// Зміни для веб-версії
 	@media(min-width: 768px) {
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: center;
 		align-items: flex-start;
 		text-align: left;
 	}
@@ -199,8 +229,38 @@ ul {
 		margin-bottom: 20px;
 	}
 
-	// Модифікація для our та contacts
-	&-contacts {
+	&__products {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: start;
+
+		@media(max-width: 768px) {
+			margin-bottom: 20px;
+		}
+
+		@media(min-width: 768px) {
+			align-items: flex-start;
+			margin: 0 50px;
+		}
+
+		p {
+			font-weight: bolder;
+			font-size: large;
+			margin-bottom: 10px;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		li {
+			margin-bottom: 5px;
+		}
+	}
+	
+	&__contacts {
 		display: flex;
 		flex-direction: column;
 		justify-content: start;
@@ -208,6 +268,7 @@ ul {
 
 		@media(min-width: 768px) {
 			align-items: flex-start;
+			margin: 0 50px;
 		}
 
 		p {
@@ -225,7 +286,7 @@ ul {
 			margin-bottom: 5px;
 		}
 
-		&__link {
+		&-link {
 			color: var(--c-site);
 
 			&:hover {
