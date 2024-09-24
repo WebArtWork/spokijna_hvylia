@@ -1656,6 +1656,7 @@ table {
 	@media (max-width:768px) {
 		display: flex;
 		justify-content: center;
+		background-color: rgba(110, 167, 255, 0.1);
 		border: 2px solid var(--c-topbar);
 		border-radius: 12px;
 		padding: 20px;

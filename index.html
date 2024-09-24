@@ -383,11 +383,19 @@
             <div class="w-forms__item">
                 Товар
             </div>
-            <div class="w-forms__input">
+            <!-- <div class="w-forms__input">
                 <input type="text" placeholder="Назва набору">
             </div>
             <div class="w-forms__input">
                 <input type="text" placeholder="К-ть">
+            </div> -->
+            <div class="w-forms__product">
+                <img src="img/product.png" alt="Зображення продукту" class="w-forms__product-image">
+                <div class="w-forms__quantity">
+                    <button type="button" class="quantity-btn" onclick="decreaseQuantity()">–</button>
+                    <span id="quantity" class="quantity-value">1</span>
+                    <button type="button" class="quantity-btn" onclick="increaseQuantity()">+</button>
+                </div>
             </div>
         </div>
         <div class="w-forms__first">
