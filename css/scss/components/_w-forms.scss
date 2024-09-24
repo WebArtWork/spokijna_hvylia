@@ -95,7 +95,8 @@
 
 		&__title {
 			text-align: center;
-			font-size: 28px;
+			font-size: 30px;
+			font-weight: 600;
 			color: #8199f3;
 		}
 
@@ -105,6 +106,7 @@
 			.radio-input {
 				display: flex;
 				flex-direction: column;
+				padding: 0 100px;
 			}
 
 			.radio-input * {
@@ -226,10 +228,62 @@
 				width: 100%;
 				max-width: 100%;
 			}
+
+			:hover {
+				background-color: var(--c-topbar);
+			}
 		}
 	}
 
 	@media (max-width: 768px) {
+		&__title {
+			font-size: 30px;
+			font-weight: 600;
+			text-align: center;
+			padding: 0 0 15px 0;
+			color: var(--c-topbar);
+		}
+
+		&__item {
+			font-size: 18px;
+			font-weight: 600;
+			text-align: start;
+			padding: 0 0 10px 0;
+		}
+
+		&__btn {
+			padding-top: 5px;
+
+			.btn {
+				width: 100%;
+				max-width: 100%;
+				font-weight: bold;
+				background-color: var(--c-topbar);
+			}
+		}
+
+		&__input {
+			width: 100%;
+			font-size: 20px;
+			border-radius: 10px;
+			border: 2px solid var(--c-topbar);
+			background: transparent;
+			background-color: var(--c-text-primary);
+			color: var(--c-text-primary);
+			margin-bottom: 15px;
+
+			input {
+				width: 100%;
+				padding: 20px;
+				border-radius: 10px;
+				border: none;
+			}
+
+			&::placeholder {
+				color: var(--c-text-primary);
+			}
+		}
+
 		&__first {
 			text-align: center;
 
@@ -249,7 +303,7 @@
 				align-items: center;
 				gap: 15px;
 				padding: 0px 20px;
-				width: 273px;
+				width: 260px;
 				cursor: pointer;
 				height: 50px;
 				position: relative;
@@ -279,7 +333,7 @@
 				background-color: #2d3750;
 				border-color: var(--c-topbar);
 				height: 50px;
-				width: 273px;
+				width: 259px;
 			}
 
 			.radio-input .label .text {
@@ -331,52 +385,8 @@
 				}
 			}
 		}
-
-		&__title {
-			font-size: 24px;
-			font-weight: 600;
-			text-align: center;
-			padding: 0 0 15px 0;
-		}
-
-		&__item {
-			font-size: 18px;
-			font-weight: 600;
-			text-align: start;
-			padding: 0 0 10px 0;
-		}
-
-		&__input {
-			margin-bottom: 15px;
-		}
-
-		&__btn {
-			padding-top: 5px;
-
-			.btn {
-				width: 100%;
-				max-width: 100%;
-				font-weight: bold;
-				background-color: var(--c-topbar);
-			}
-		}
-
-		&__input {
-			width: 100%;
-			font-size: 20px;
-			padding: 18px 8px;
-			border-radius: 10px;
-			border: 2px solid var(--c-topbar);
-			background: transparent;
-			color: var(--c-text-primary);
-
-			&::placeholder {
-				color: var(--c-text-primary);
-			}
-		}
 	}
 }
-
 
 // textarea {
 // 	height: 120px;
@@ -402,7 +412,7 @@
 // 	.w-form__title {
 // 		text-align: center;
 // 		font-size: 28px;
-// 		color: #8199f3;
+// 		color: var(--c-topbar);
 // 	}
 
 // 	.form__first {
