@@ -178,7 +178,7 @@
                     <div class="card_content-blue">
                         <h2 class="card_title">"Забуття турбот"<br>синій</h2>
                         <p class="card_text">(Для зняття стресу)</p>
-                        <button class="open-modal" data-target="content1">
+                        <button class="open-modal" onclick="updateProductName('Забуття турбот')" data-target="content1">
                             <p>Замовити</p>
                             <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 version="1.1" id="Capa_1" viewBox="0 0 407.453 407.453" xml:space="preserve">
@@ -205,7 +205,7 @@
                     <div class="card_content-pink">
                         <h2 class="card_title">"Еліксир відновлення"<br>рожевий</h2>
                         <p class="card_text">(Для відновлення тіла)</p>
-                        <button class="open-modal" data-target="content1">
+                        <button class="open-modal" onclick="updateProductName('Еліксир відновлення')" data-target="content1">
                             <p>Замовити</p>
                         </button>
                     </div>
@@ -217,7 +217,7 @@
                     <div class="card_content-orange">
                         <h2 class="card_title">"Шовкова ніжність"<br>оранжений</h2>
                         <p class="card_text">(Для догляду за шкірою)</p>
-                        <button class="open-modal" data-target="content1">
+                        <button class="open-modal" onclick="updateProductName('Шовкова ніжність')" data-target="content1">
                             <p>Замовити</p>
                         </button>
                     </div>
@@ -389,12 +389,24 @@
             <div class="w-forms__input">
                 <input type="text" placeholder="К-ть">
             </div> -->
-            <div class="w-forms__product">
+            <!-- <div class="w-forms__product">
                 <img src="img/product.png" alt="Зображення продукту" class="w-forms__product-image">
+
                 <div class="w-forms__quantity">
                     <button type="button" class="quantity-btn" onclick="decreaseQuantity()">–</button>
                     <span id="quantity" class="quantity-value">1</span>
                     <button type="button" class="quantity-btn" onclick="increaseQuantity()">+</button>
+                </div>
+            </div> -->
+            <div class="w-forms__product">
+                <img src="img/product.png" alt="Зображення продукту" class="w-forms__product-image">
+                <div class="w-forms__product-info">
+                    <p id="product-name">Обраний товар</p>
+                    <div class="w-forms__quantity">
+                        <button type="button" class="w-forms__quantity-btn" onclick="decreaseQuantity()">–</button>
+                        <span id="quantity" class="w-forms__quantity-value">1</span>
+                        <button type="button" class="w-forms__quantity-btn" onclick="increaseQuantity()">+</button>
+                    </div>
                 </div>
             </div>
         </div>

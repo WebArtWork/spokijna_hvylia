@@ -588,35 +588,35 @@ table {
 	overflow-x: hidden;
 }
 
-@media (max-width: 576px) {
-	.hscroll-sm {
-		overflow-x: auto;
-	}
-}
+// @media (max-width: 576px) {
+// 	.hscroll-sm {
+// 		overflow-x: auto;
+// 	}
+// }
 
-@media (max-width: 768px) {
-	.hscroll-md {
-		overflow-x: auto;
-	}
-}
+// @media (max-width: 768px) {
+// 	.hscroll-md {
+// 		overflow-x: auto;
+// 	}
+// }
 
-@media (max-width: 992px) {
-	.hscroll-lg {
-		overflow-x: auto;
-	}
-}
+// @media (max-width: 992px) {
+// 	.hscroll-lg {
+// 		overflow-x: auto;
+// 	}
+// }
 
-@media (max-width: 1200px) {
-	.hscroll-xl {
-		overflow-x: auto;
-	}
-}
+// @media (max-width: 1200px) {
+// 	.hscroll-xl {
+// 		overflow-x: auto;
+// 	}
+// }
 
-@media (max-width: 1400px) {
-	.hscroll-xxl {
-		overflow-x: auto;
-	}
-}
+// @media (max-width: 1400px) {
+// 	.hscroll-xxl {
+// 		overflow-x: auto;
+// 	}
+// }
 
 .list {
 	margin-bottom: 0.5rem;
@@ -836,7 +836,7 @@ table {
 
 	video {
 		width: 100%;
-		height: 100%;
+		height: 100vh;
 		object-fit: cover;
 	}
 
@@ -860,7 +860,27 @@ table {
 		}
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 768px) and (max-width: 1024px) {
+		font-size: 25px;
+		color: var(--c-bg);
+		padding: 8rem;
+		position: absolute;
+		top: 120px;
+		left: 0;
+		z-index: 9;
+	}
+
+	@media (min-width: 1024px) and (max-width: 1150px) {
+		font-size: 30px;
+		color: var(--c-bg);
+		padding: 8rem;
+		position: absolute;
+		top: 120px;
+		left: 0;
+		z-index: 9;
+	}
+
+	@media (min-width: 1150px) {
 		font-size: 2em;
 		color: var(--c-bg);
 		padding: 12rem;
@@ -931,15 +951,14 @@ table {
 
 
 		@media only screen and (min-width: 768px) and (max-width: 1024px) {
-			width: 200px;
+			// width: 200px;
 			background-color: var(--c-topbar);
 			appearance: none;
-			background-color: var(--c-intro);
 			border: 3px solid var(--c-topbar);
 			box-sizing: border-box;
-			color: var(--c-d-site);
+			color: var(--c-site);
 			cursor: pointer;
-			// font-size: 14px;
+			font-size: 20px;
 			font-weight: 500;
 			line-height: 20px;
 			list-style: none;
@@ -953,9 +972,6 @@ table {
 			white-space: nowrap;
 			word-wrap: break-word;
 			text-align: center;
-			margin-right: 12rem;
-			margin-left: 12rem;
-			margin-bottom: 8rem;
 
 			&:hover {
 				background-color: var(--c-topbar);
@@ -1649,6 +1665,7 @@ table {
 		display: none;
 	}
 }
+
 // END FAQ
 
 // form
@@ -1686,4 +1703,5 @@ table {
 		}
 	}
 }
+
 // END form

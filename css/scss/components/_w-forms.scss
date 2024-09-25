@@ -240,14 +240,22 @@
 		&__product {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: space-evenly;
 			max-width: 400px;
 			margin: 0 auto 20px;
 			padding: 15px;
 			border-radius: 15px;
 			background-color: var(--c-text-primary);
-			
-		
+			color: var(--c-text-secondary);
+
+			&-info {
+				display: flex;
+
+				p {
+					margin: 0 20px;
+				}
+			}
+
 			&-image {
 				max-width: 120px;
 				max-height: 120px;
@@ -255,43 +263,45 @@
 				object-fit: cover;
 				margin-right: 20px;
 			}
-		
-			&__quantity {
+		}
+
+		&__quantity {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 10px;
+
+			&-btn {
 				display: flex;
+				flex-direction: column;
+				background-color: var(--c-topbar);
+				color: var(--c-text);
+				border: none;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				font-size: 20px;
+				display: flex;
+				justify-content: center;
 				align-items: center;
-				justify-content: space-between;
-				gap: 10px;
-		
-				.quantity-btn {
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+
+				&:hover {
 					background-color: var(--c-topbar);
-					color: var(--c-text);
-					border: none;
-					width: 40px;
-					height: 40px;
-					border-radius: 50%;
-					font-size: 20px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					cursor: pointer;
-					transition: background-color 0.3s ease;
-		
-					&:hover {
-						background-color: var(--c-topbar);
-					}
-		
-					&:active {
-						transform: scale(0.95);
-					}
 				}
-		
-				.quantity-value {
-					font-size: 20px;
-					font-weight: bold;
-					color: var(--c-text);
-					width: 40px;
-					text-align: center;
+
+				&:active {
+					transform: scale(0.95);
 				}
+			}
+
+			&-value {
+				font-size: 20px;
+				font-weight: bold;
+				color: var(--c-text);
+				width: 40px;
+				text-align: center;
 			}
 		}
 	}
@@ -450,7 +460,7 @@
 		&__product {
 			flex-direction: column;
 			align-items: center;
-	
+
 			&-image {
 				margin-bottom: 15px;
 			}

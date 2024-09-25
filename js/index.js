@@ -87,3 +87,7 @@ function decreaseQuantity() {
         document.getElementById('quantity').textContent = quantity;
     }
 }
+
+function updateProductName(name) {
+    document.getElementById('product-name').textContent = name;
+}
