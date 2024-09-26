@@ -840,7 +840,7 @@ table {
 		object-fit: cover;
 	}
 
-	@media (max-width: 480px) {
+	@media (max-width: 768px) {
 		display: none;
 	}
 }
@@ -1160,16 +1160,6 @@ table {
 		box-sizing: border-box;
 	}
 
-	/*
-	body {
-		color: #272727;
-		font-style: normal;
-		font-weight: 400;
-		letter-spacing: 0;
-		padding: 1rem;
-	}
-*/
-
 	.bg {
 		background-color: var(--c-bg);
 	}
@@ -1212,7 +1202,7 @@ table {
 
 	.cards_item {
 		display: flex;
-		padding: 1rem;
+		padding: 1.25rem;
 	}
 
 	@media (min-width: 40rem) {
