@@ -1674,6 +1674,44 @@ table {
 				text-align: center;
 				font-size: 20px;
 			}
+
+			&__input {
+				width: 100%;
+				font-size: 20px;
+				border-radius: 10px;
+				background: transparent;
+				background-color: var(--c-text-primary);
+				color: var(--c-text-primary);
+				margin-bottom: 15px;
+
+				input {
+					width: 100%;
+					padding: 20px;
+					border-radius: 10px;
+					border: none;
+				}
+
+				&::placeholder {
+					color: var(--c-text-primary);
+				}
+			}
+
+			textarea {
+				height: 120px;
+				width: 100%;
+				font-size: 20px;
+				padding: 18px 8px;
+				border-radius: 10px;
+				border: none;
+				background-color: var(--c-text-primary);
+				color: var(--c-text);
+				resize: none;
+				margin-bottom: 15px;
+
+				&::placeholder {
+					color: var(--c-text);
+				}
+			}
 		}
 	}
 

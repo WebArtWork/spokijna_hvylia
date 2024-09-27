@@ -1,10 +1,10 @@
 {
-	"title": "Title which will fit on all pages",
-	"description": "Description which will fit on all pages",
+	"title": "Спокійна хвиля",
+	"description": "Вітаємо вас у світі натурального догляду за шкірою! Ми раді представити вам наш новий продукт – трав’яний чай для ванни! Цей унікальний склад з ретельно відібраних трав не лише перетворює вашу ванну на справжній СПА-ритуал, але й дарує шкірі багато корисних властивостей.",
 	"keywords": "waw, web art work, server render, template",
 	"prefix": "/wjst-default",
 	"favicon": "img/favicon.ico",
-	"image": "https://webartwork.github.io/wjst-default/img/avatar.png",
+	"image": "img/avatar.png",
 	"author": "Honchar Denys",
 	"scss": "scss/index.scss"
 }
