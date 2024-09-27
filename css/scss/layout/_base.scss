@@ -280,18 +280,36 @@ ul {
 		ul {
 			list-style: none;
 			padding: 0;
-		}
 
-		li {
-			margin-bottom: 5px;
+			li {
+				margin-bottom: 5px;
 
-			svg {
-				fill: var(--c-text-primary);
+				a {
+					display: flex;
+					align-items: center;
+					transition: color var(--transition);
 
-				:hover {
-					transition: var(--transition);
-					fill: var(--c-primary-hover);
-				}	
+					svg {
+						fill: var(--c-text-primary);
+						transition: fill var(--transition);
+					}
+
+					span {
+						color: var(--c-text-primary);
+						transition: color var(--transition);
+						margin-left: 10px;
+					}
+
+					&:hover {
+						svg {
+							fill: var(--c-primary-hover);
+						}
+
+						span {
+							color: var(--c-primary-hover);
+						}
+					}
+				}
 			}
 		}
 
