@@ -2,7 +2,7 @@
 html {
 	font-size: var(--fs);
 	height: 100%;
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 }
 
 body {
@@ -183,7 +183,7 @@ ul {
 		}
 
 		@media(min-width: 768px) {
-			margin: 0 50px;
+			margin: 0 20px;
 
 			&-logo {
 				padding: 5px;
@@ -241,7 +241,7 @@ ul {
 
 		@media(min-width: 768px) {
 			align-items: flex-start;
-			margin: 0 50px;
+			margin: 0 20px;
 		}
 
 		p {
@@ -268,7 +268,7 @@ ul {
 
 		@media(min-width: 768px) {
 			align-items: flex-start;
-			margin: 0 50px;
+			margin: 0 20px;
 		}
 
 		p {
