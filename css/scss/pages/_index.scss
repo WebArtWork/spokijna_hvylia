@@ -700,15 +700,22 @@ table {
 			font-size: larger;
 			color: var(--c-site);
 
-			.logo {
-				padding: 5px;
-				width: 90px;
-				height: 70px;
+			@media (max-width: 768px) {
+				display: none;
 			}
+
+			@media (max-width: 835px) {
+				display: none;
+			}
+		}
+
+		&-logo {
+			padding: 5px;
+			width: 90px;
+			height: 70px;
 
 			@media (max-width: 768px) {
 				display: none;
-				/* Вимикаємо brand на мобільних пристроях */
 			}
 		}
 
@@ -717,11 +724,9 @@ table {
 			align-items: center;
 			font-weight: bold;
 			margin-left: auto;
-			/* Переміщуємо links праворуч на веб-версії */
 
 			@media (max-width: 768px) {
 				order: 1;
-				/* Переміщуємо links ліворуч на мобільних пристроях */
 				margin-left: 0;
 				margin-right: auto;
 			}
@@ -1751,7 +1756,7 @@ table {
 		}
 	}
 
-	
+
 	@media only screen and (min-width: 516px) and (max-width: 768px) {
 		display: flex;
 		justify-content: center;
