@@ -158,176 +158,231 @@ ul {
 }
 
 .footer {
-	width: 100%;
-	padding: var(--padding);
-	text-align: start;
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: start;
 	background-color: var(--c-topbar);
 	color: var(--c-text-primary);
+	padding: 20px 0;
 
-	&__container {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-
-		@media(max-width: 768px) {
-			margin-bottom: 20px;
-
-			&-logo {
-				display: none;
-			}
-		}
-
-		@media(min-width: 768px) {
-			margin: 0 20px;
-
-			&-logo {
-				padding: 5px;
-				width: 90px;
-				height: 70px;
-			}
-		}
-
-		&-brand {
-			font-weight: bold;
-			font-size: larger;
-			color: var(--c-site);
-		}
-	}
-
-	// Зміни для веб-версії
 	@media(min-width: 768px) {
-		flex-direction: row;
-		justify-content: center;
-		align-items: flex-start;
-		text-align: left;
-	}
+		&__container {
+			display: flex;
+			justify-content: space-evenly;
+			margin: 0 40px;
 
-	&__text {
-		margin: 0;
-		font-size: 0.9em;
+			&-brand {
+				display: flex;
+				align-items: center;
 
-		&-part {
-			margin: 0 5px;
-		}
-	}
+				.text {
+					font-weight: bold;
+					font-size: larger;
+					color: var(--c-site);
+				}
 
-	&__link {
-		&:hover {
-			color: var(--c-primary-hover);
-			text-decoration: underline;
-		}
-	}
+				.logo {
+					padding: 5px;
+					width: 90px;
+					height: 70px;
+				}
+			}
 
-	// Залишаємо мобільну версію h1
-	h1 {
-		font-size: 1.8em;
-		margin-bottom: 20px;
-	}
+			&-link {
+				&:hover {
+					color: var(--c-primary-hover);
+				}
+			}
 
-	&__products {
-		display: flex;
-		flex-direction: column;
-		justify-content: start;
-		align-items: start;
+			&-products {
+				display: flex;
+				flex-direction: column;
+				margin: 0 20px;
 
-		@media(max-width: 768px) {
-			margin-bottom: 20px;
-		}
+				p {
+					font-weight: bolder;
+					font-size: large;
+					margin-bottom: 10px;
+				}
 
-		@media(min-width: 768px) {
-			align-items: flex-start;
-			margin: 0 20px;
-		}
+				ul {
+					list-style: none;
+					padding: 0;
+				}
 
-		p {
-			font-weight: bolder;
-			font-size: large;
-			margin-bottom: 10px;
-		}
+				li {
+					margin-bottom: 5px;
+				}
+			}
 
-		ul {
-			list-style: none;
-			padding: 0;
-		}
+			&-contacts {
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+				align-items: flex-start;
+				margin: 0 20px;
 
-		li {
-			margin-bottom: 5px;
-		}
-	}
+				p {
+					font-weight: bolder;
+					font-size: large;
+					margin-bottom: 10px;
+				}
 
-	&__contacts {
-		display: flex;
-		flex-direction: column;
-		justify-content: start;
-		align-items: start;
+				ul {
+					list-style: none;
+					padding: 0;
 
-		@media(min-width: 768px) {
-			align-items: flex-start;
-			margin: 0 20px;
-		}
+					li {
+						margin-bottom: 5px;
 
-		p {
-			font-weight: bolder;
-			font-size: large;
-			margin-bottom: 10px;
-		}
+						a {
+							display: flex;
+							align-items: center;
+							transition: color var(--transition);
 
-		ul {
-			list-style: none;
-			padding: 0;
+							svg {
+								fill: var(--c-text-primary);
+								transition: fill var(--transition);
+							}
 
-			li {
-				margin-bottom: 5px;
+							span {
+								color: var(--c-text-primary);
+								transition: color var(--transition);
+								margin-left: 10px;
+							}
 
-				a {
-					display: flex;
-					align-items: center;
-					transition: color var(--transition);
+							&:hover {
+								svg {
+									fill: var(--c-primary-hover);
+								}
 
-					svg {
-						fill: var(--c-text-primary);
-						transition: fill var(--transition);
+								span {
+									color: var(--c-primary-hover);
+								}
+							}
+						}
 					}
+				}
 
-					span {
-						color: var(--c-text-primary);
-						transition: color var(--transition);
-						margin-left: 10px;
-					}
+				&-link {
+					color: var(--c-site);
 
 					&:hover {
-						svg {
-							fill: var(--c-primary-hover);
-						}
-
-						span {
-							color: var(--c-primary-hover);
-						}
+						transition: var(--transition);
+						color: var(--c-primary-hover);
 					}
 				}
 			}
 		}
-
-		&-link {
-			color: var(--c-site);
-
-			&:hover {
-				transition: var(--transition);
-				color: var(--c-primary-hover);
-			}
-		}
 	}
 
-	// Веб-версія для h1
-	@media(min-width: 768px) {
-		h1 {
-			margin-bottom: 0;
-			font-size: 2em;
+	@media(max-width: 768px) {
+		&__container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: start;
+			text-align: left;
+
+			&-brand {
+				display: flex;
+				align-items: center;
+
+				.text {
+					font-weight: bold;
+					font-size: larger;
+					color: var(--c-site);
+				}
+
+				.logo {
+					padding: 5px;
+					width: 90px;
+					height: 70px;
+				}
+			}
+
+			&-link {
+				&:hover {
+					color: var(--c-primary-hover);
+				}
+			}
+
+			&-products {
+				display: flex;
+				flex-direction: column;
+				margin: 0 20px;
+
+				p {
+					font-weight: bolder;
+					font-size: large;
+					margin-bottom: 10px;
+				}
+
+				ul {
+					list-style: none;
+					padding: 0;
+				}
+
+				li {
+					margin-bottom: 5px;
+				}
+			}
+
+			&-contacts {
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+				align-items: flex-start;
+				margin: 0 20px;
+
+				p {
+					font-weight: bolder;
+					font-size: large;
+					margin-bottom: 10px;
+				}
+
+				ul {
+					list-style: none;
+					padding: 0;
+
+					li {
+						margin-bottom: 5px;
+
+						a {
+							display: flex;
+							align-items: center;
+							transition: color var(--transition);
+
+							svg {
+								fill: var(--c-text-primary);
+								transition: fill var(--transition);
+							}
+
+							span {
+								color: var(--c-text-primary);
+								transition: color var(--transition);
+								margin-left: 10px;
+							}
+
+							&:hover {
+								svg {
+									fill: var(--c-primary-hover);
+								}
+
+								span {
+									color: var(--c-primary-hover);
+								}
+							}
+						}
+					}
+				}
+
+				&-link {
+					color: var(--c-site);
+
+					&:hover {
+						transition: var(--transition);
+						color: var(--c-primary-hover);
+					}
+				}
+			}
 		}
 	}
 }
