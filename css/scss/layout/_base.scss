@@ -284,6 +284,7 @@ ul {
 			&-brand {
 				display: flex;
 				align-items: center;
+				margin-bottom: 10px;
 
 				.text {
 					font-weight: bold;
@@ -307,7 +308,7 @@ ul {
 			&-products {
 				display: flex;
 				flex-direction: column;
-				margin: 0 20px;
+				margin: 0 20px 10px 20px;
 
 				p {
 					font-weight: bolder;
