@@ -9,27 +9,16 @@ const toggleClass = (id, className) => {
 
 
 /* ACCARDION CODE */
-document.addEventListener("DOMContentLoaded", function () {
-    const accordionButtons = document.querySelectorAll(".accordion-button");
+// Получаем все элементы с классом 'FAQ-item-question'
+const questions = document.querySelectorAll('.FAQ-item-question');
 
-    accordionButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            const content = this.nextElementSibling;
-            const activeContent = document.querySelector(".accordion-content[style]");
-
-            if (activeContent && activeContent !== content) {
-                activeContent.style.maxHeight = null;
-                activeContent.previousElementSibling.classList.remove("active");
-            }
-
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                this.classList.remove("active");
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                this.classList.add("active");
-            }
-        });
+// Добавляем обработчик события на каждый элемент
+questions.forEach(function(question) {
+    question.addEventListener('click', function() {
+        // Находим ближайший элемент с классом 'FAQ-item'
+        const faqItem = this.closest('.FAQ-item');
+        // Переключаем класс 'FAQ-item--open'
+        faqItem.classList.toggle('FAQ-item--open');
     });
 });
 
