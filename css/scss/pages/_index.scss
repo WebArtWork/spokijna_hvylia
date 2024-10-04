@@ -907,8 +907,64 @@ table {
 		display: none;
 	}
 }
-
+@media (max-width: 769px){
+	.mobile {
+		display: block !important;
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #0000006e;
+			z-index: 0;
+		}
+	}
+}
 .intro {
+	font-size: 2em;
+	color: var(--c-bg);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-30%);
+	left: 0;
+	z-index: 9;
+	padding: 0 190px;
+	@media (max-width: 1500px) {
+		font-size: 28px;
+		color: var(--c-bg);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-30%);
+		left: 0;
+		z-index: 9;
+		padding: 0 70px;
+	}
+	@media (max-width: 1199px) {
+		h1{
+			font-size: 42px;
+		}
+	}
+	@media (max-width:769px) {
+		transform: translateY(-50%);
+		padding: 0 30px;
+		h1 {
+			font-size: 31px;
+		}
+		p{
+			font-size: 22px;
+		}
+	}
+	@media (max-width:479px) {
+		padding: 0 15px;
+		h1 {
+			font-size: 22px;
+		}
+		p {
+			font-size: 16px;
+		}	
+	}
+	/*
 	@media (max-width: 768px) {
 		font-size: 14px;
 		color: var(--c-d-site);
@@ -924,41 +980,37 @@ table {
 	}
 
 	@media (min-width: 768px) and (max-width: 1024px) {
-		font-size: 25px;
-		color: var(--c-bg);
-		padding: 8rem;
-		position: absolute;
-		top: 120px;
-		left: 0;
-		z-index: 9;
+		font-size: 2em;
+        color: var(--c-bg);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-30%);
+        left: 0;
+        z-index: 9;
+        padding: 0 50px;
+		h1{
+			
+		}
 	}
-
-	@media (min-width: 1024px) and (max-width: 1150px) {
-		font-size: 30px;
-		color: var(--c-bg);
-		padding: 8rem;
-		position: absolute;
-		top: 120px;
-		left: 0;
-		z-index: 9;
-	}
-
 	@media (min-width: 1150px) {
 		font-size: 2em;
-		color: var(--c-bg);
-		padding: 12rem;
-		position: absolute;
-		top: 150px;
-		left: 0;
-		z-index: 9;
-	}
+        color: var(--c-bg);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-30%);
+        left: 0;
+        z-index: 9;
+        padding: 0 190px;
+	}*/
 }
 
 .main-button {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	display: flex;
-
+	@media (max-width:769px) {
+		display: block;
+	}
 	.active {
 		background-color: var(--c-topbar);
 	}
@@ -967,6 +1019,9 @@ table {
 		border-radius: 12px;
 
 		@media (max-width: 768px) {
+			width: 100%;
+			max-width: 200px;
+			height: 55px;
 			appearance: none;
 			background-color: var(--c-topbar);
 			box-sizing: border-box;
@@ -986,7 +1041,8 @@ table {
 			white-space: nowrap;
 			word-wrap: break-word;
 			text-align: center;
-			font-size: 1rem;
+			font-size: 18px;
+        	font-weight: 600;
 
 			a {
 				color: var(--c-site);
