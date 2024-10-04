@@ -13,12 +13,12 @@
 	color: var(--c-text-secondary);
 	padding: 10px;
 
-	&-title {
+	/*&-title {
 		font-size: 36px;
 		margin: 20px 0;
 		font-weight: bold;
 		text-align: center;
-	}
+	}*/
 
 	&-avatar {
 		width: 100px;
@@ -879,6 +879,22 @@ table {
 	}
 }
 
+@media (max-width: 769px) {
+	.mobile {
+		display: block !important;
+		position: relative;
+
+		&::before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #0000006e;
+			z-index: 0;
+		}
+	}
+}
+
 .web {
 	width: 100%;
 	height: 100vh;
@@ -894,10 +910,12 @@ table {
 		display: none;
 	}
 }
-@media (max-width: 769px){
-	.mobile {
+
+@media (min-width: 769px) {
+	.web {
 		display: block !important;
 		position: relative;
+
 		&::before{
 			content: '';
 			position: absolute;
@@ -908,12 +926,13 @@ table {
 		}
 	}
 }
-.intro {
+
+.title {
 	font-size: 2em;
 	color: var(--c-bg);
 	position: absolute;
 	top: 50%;
-	transform: translateY(-30%);
+	transform: translateY(-50%);
 	left: 0;
 	z-index: 9;
 	padding: 0 190px;
@@ -923,10 +942,10 @@ table {
 		color: var(--c-bg);
 		position: absolute;
 		top: 50%;
-		transform: translateY(-30%);
+		transform: translateY(-50%);
 		left: 0;
 		z-index: 9;
-		padding: 0 70px;
+		padding: 0 100px;
 	}
 
 	@media (max-width: 1199px) {
@@ -937,20 +956,24 @@ table {
 
 	@media (max-width:769px) {
 		transform: translateY(-50%);
-		padding: 0 30px;
+		padding: 0 55px;
+
 		h1 {
 			font-size: 31px;
 		}
+
 		p{
 			font-size: 22px;
 		}
 	}
 
 	@media (max-width:479px) {
-		padding: 0 15px;
+		padding: 0 40px;
+
 		h1 {
 			font-size: 22px;
 		}
+
 		p {
 			font-size: 16px;
 		}	
@@ -999,9 +1022,11 @@ table {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	display: flex;
+
 	@media (max-width:769px) {
 		display: block;
 	}
+
 	.active {
 		background-color: var(--c-topbar);
 	}
@@ -1033,7 +1058,7 @@ table {
 			word-wrap: break-word;
 			text-align: center;
 			font-size: 18px;
-        	font-weight: 600;
+        	font-weight: 500;
 
 			a {
 				color: var(--c-site);
@@ -1354,7 +1379,6 @@ table {
 }
 
 .shape-upper {
-
 	svg {
 		display: block;
 		width: 100%;
@@ -1364,9 +1388,7 @@ table {
 		transform: translateX(-50%) rotate(180deg);
 	}
 }
-
 .shape-lower {
-
 	svg {
 		display: block;
 		width: 100%;
@@ -1377,7 +1399,6 @@ table {
 }
 
 .shape-footer {
-
 	@media (max-width: 768px) {
 		svg {
 			display: block;
