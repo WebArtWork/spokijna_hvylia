@@ -1261,8 +1261,6 @@ table {
 	}
 }
 
-
-
 .shape-navbar {
 	position: relative;
 	z-index: 2;
@@ -1793,11 +1791,13 @@ table {
 		}
 	}
 }
+
 .FAQ{
 	max-width: 800px;
 	margin: 0 auto;
 	width: 100%;
 }
+
 .faq {
 	@media (min-width: 768px) {
 		max-width: 800px;
