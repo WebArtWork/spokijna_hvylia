@@ -1,16 +1,3 @@
-// Colors
-
-$blue: #007eff;
-$dark: #1c1c1c;
-$white: #ffffff;
-$blue-gray: #868401;
-$blue-gray-darken: #6d6b07;
-$yellow: #e0dc10;
-$yellow-darken: #d6d310;
-$green: #928907;
-$green-darken: #16a085;
-$red-darken: #581010;
-
 * {
 	margin: 0;
 	padding: 0;
@@ -588,35 +575,35 @@ table {
 	overflow-x: hidden;
 }
 
-// @media (max-width: 576px) {
-// 	.hscroll-sm {
-// 		overflow-x: auto;
-// 	}
-// }
+/*@media (max-width: 576px) {
+	.hscroll-sm {
+		overflow-x: auto;
+	}
+}
 
-// @media (max-width: 768px) {
-// 	.hscroll-md {
-// 		overflow-x: auto;
-// 	}
-// }
+@media (max-width: 768px) {
+	.hscroll-md {
+		overflow-x: auto;
+	}
+}
 
-// @media (max-width: 992px) {
-// 	.hscroll-lg {
-// 		overflow-x: auto;
-// 	}
-// }
+@media (max-width: 992px) {
+	.hscroll-lg {
+		overflow-x: auto;
+	}
+}
 
-// @media (max-width: 1200px) {
-// 	.hscroll-xl {
-// 		overflow-x: auto;
-// 	}
-// }
+@media (max-width: 1200px) {
+	.hscroll-xl {
+		overflow-x: auto;
+	}
+}
 
-// @media (max-width: 1400px) {
-// 	.hscroll-xxl {
-// 		overflow-x: auto;
-// 	}
-// }
+@media (max-width: 1400px) {
+	.hscroll-xxl {
+		overflow-x: auto;
+	}
+}*/
 
 .list {
 	margin-bottom: 0.5rem;
@@ -930,6 +917,7 @@ table {
 	left: 0;
 	z-index: 9;
 	padding: 0 190px;
+
 	@media (max-width: 1500px) {
 		font-size: 28px;
 		color: var(--c-bg);
@@ -940,11 +928,13 @@ table {
 		z-index: 9;
 		padding: 0 70px;
 	}
+
 	@media (max-width: 1199px) {
 		h1{
 			font-size: 42px;
 		}
 	}
+
 	@media (max-width:769px) {
 		transform: translateY(-50%);
 		padding: 0 30px;
@@ -955,6 +945,7 @@ table {
 			font-size: 22px;
 		}
 	}
+
 	@media (max-width:479px) {
 		padding: 0 15px;
 		h1 {
@@ -964,8 +955,8 @@ table {
 			font-size: 16px;
 		}	
 	}
-	/*
-	@media (max-width: 768px) {
+
+	/*@media (max-width: 768px) {
 		font-size: 14px;
 		color: var(--c-d-site);
 		padding: 3rem;
@@ -1054,14 +1045,12 @@ table {
 				transition-duration: 0.3s;
 			}
 
-			// Повертаємо початковий стан після завершення кліку
 			&:focus {
 				background-color: var(--c-topbar);
 				color: var(--c-site);
 				outline: none;
 			}
 
-			// Щоб одразу після кліку стан active не тримався
 			&:after {
 				content: '';
 				display: none;
@@ -1070,7 +1059,6 @@ table {
 
 
 		@media only screen and (min-width: 768px) and (max-width: 1024px) {
-			// width: 200px;
 			background-color: var(--c-topbar);
 			appearance: none;
 			border: 3px solid var(--c-topbar);
@@ -1848,13 +1836,13 @@ table {
 	}
 }
 
-.FAQ{
+.faq {
 	max-width: 800px;
 	margin: 0 auto;
 	width: 100%;
 }
 
-.faq {
+/*.faq {
 	@media (min-width: 768px) {
 		max-width: 800px;
 		margin: 0 auto;
@@ -1939,7 +1927,7 @@ table {
 	.panel {
 		display: none;
 	}
-}
+}*/
 
 .form {
 	@media (max-width: 516px) {

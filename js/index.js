@@ -9,16 +9,16 @@ const toggleClass = (id, className) => {
 
 
 /* ACCARDION CODE */
-// Получаем все элементы с классом 'FAQ-item-question'
-const questions = document.querySelectorAll('.FAQ-item-question');
+// Получаем все элементы с классом 'faq-item-question'
+const questions = document.querySelectorAll('.faq-item-question');
 
 // Добавляем обработчик события на каждый элемент
 questions.forEach(function(question) {
     question.addEventListener('click', function() {
-        // Находим ближайший элемент с классом 'FAQ-item'
-        const faqItem = this.closest('.FAQ-item');
-        // Переключаем класс 'FAQ-item--open'
-        faqItem.classList.toggle('FAQ-item--open');
+        // Находим ближайший элемент с классом 'faq-item'
+        const faqItem = this.closest('.faq-item');
+        // Переключаем класс 'faq-item--open'
+        faqItem.classList.toggle('faq-item--open');
     });
 });
 
