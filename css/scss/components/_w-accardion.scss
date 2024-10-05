@@ -9,7 +9,7 @@
   .faq-item-question {
     display: flex;
     flex-flow: row wrap;
-    border-top: 3px solid var(--c-topbar);
+    border-top: 2px solid var(--c-topbar);
     justify-content: space-between;
     font-weight: bold;
     font-size: 24px;
@@ -38,7 +38,7 @@
     opacity: 0;
     overflow: hidden;
     max-height: 0;
-    border-top: 3px solid var(--c-topbar);
+    border-top: 1px dotted var(--c-topbar);
   }
 
   .faq-item-answer span {

@@ -7,7 +7,6 @@ const toggleClass = (id, className) => {
     }
 }
 
-
 /* ACCARDION CODE */
 // Получаем все элементы с классом 'faq-item-question'
 const questions = document.querySelectorAll('.faq-item-question');

@@ -884,7 +884,7 @@ table {
 		display: block !important;
 		position: relative;
 
-		&::before{
+		&::before {
 			content: '';
 			position: absolute;
 			width: 100%;
@@ -916,7 +916,7 @@ table {
 		display: block !important;
 		position: relative;
 
-		&::before{
+		&::before {
 			content: '';
 			position: absolute;
 			width: 100%;
@@ -949,7 +949,7 @@ table {
 	}
 
 	@media (max-width: 1199px) {
-		h1{
+		h1 {
 			font-size: 42px;
 		}
 	}
@@ -962,7 +962,7 @@ table {
 			font-size: 31px;
 		}
 
-		p{
+		p {
 			font-size: 22px;
 		}
 	}
@@ -976,7 +976,7 @@ table {
 
 		p {
 			font-size: 16px;
-		}	
+		}
 	}
 
 	/*@media (max-width: 768px) {
@@ -1058,7 +1058,7 @@ table {
 			word-wrap: break-word;
 			text-align: center;
 			font-size: 18px;
-        	font-weight: 500;
+			font-weight: 500;
 
 			a {
 				color: var(--c-site);
@@ -1388,6 +1388,7 @@ table {
 		transform: translateX(-50%) rotate(180deg);
 	}
 }
+
 .shape-lower {
 	svg {
 		display: block;
@@ -1861,6 +1862,15 @@ table {
 	max-width: 800px;
 	margin: 0 auto;
 	width: 100%;
+
+	@media (max-width: 858px) {
+		.container {
+			max-width: 530px;
+			width: 100%;
+			padding: 30px;
+			margin: 0 auto;
+		}
+	}
 }
 
 /*.faq {
@@ -1955,7 +1965,7 @@ table {
 		display: flex;
 		justify-content: center;
 		background-color: var(--c-form-bg);
-        border: 1px solid var(--c-form-border);
+		border: 1px solid var(--c-form-border);
 		border-radius: 12px;
 		padding: 20px;
 		margin: 20px 30px;
@@ -2015,7 +2025,7 @@ table {
 		display: flex;
 		justify-content: center;
 		background-color: var(--c-form-bg);
-        border: 1px solid var(--c-form-border);
+		border: 1px solid var(--c-form-border);
 		border-radius: 12px;
 		padding: 20px;
 		margin: 20px auto;
@@ -2073,7 +2083,7 @@ table {
 
 	@media (min-width:768px) {
 		background-color: var(--c-form-bg);
-        border: 1px solid var(--c-form-border);
+		border: 1px solid var(--c-form-border);
 		border-radius: 12px;
 		padding: 20px;
 		margin: 40px auto;
